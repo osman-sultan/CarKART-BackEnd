@@ -1,1 +1,1 @@
-# MIE350_Team7_Project
+# MIE350 Team7 Project Repo
