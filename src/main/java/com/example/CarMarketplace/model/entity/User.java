@@ -39,11 +39,11 @@ public class User {
     @NotEmpty
     private String address;
 
-    @NotEmpty
-    private String creditCardNumber;
+//    @NotEmpty
+//    private String creditCardNumber; <--- lolll i dont think we need this cuz the transaction happens outside of website
 
-    @NotEmpty
-    private String userType;
+//    @NotEmpty
+//    private String userType; <--- wat is this? Seller or buyer? I think a user should have ability to be both
 
     public User(int id, String username, String email, String password) {
         this.id = id;
