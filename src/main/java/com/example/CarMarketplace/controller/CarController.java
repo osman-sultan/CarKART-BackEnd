@@ -94,4 +94,9 @@ public class CarController {
                     return repository.save(newCar);
                 });
     }
+
+    @GetMapping("/cars/search/model/{keyWord}")
+    List<Car> searchCarModel(@PathVariable("modelName") String modelName) {
+        return repository.searchModel(modelName);
+    }
 }

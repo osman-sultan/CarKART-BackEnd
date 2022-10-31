@@ -48,4 +48,9 @@ public class ReviewController {
         newReview.setUser(user);
         return repository.save(newReview);
     }
+
+    @GetMapping("/reviews/search/{id}")
+    List<Review> searchReview(@PathVariable("postId") String postId) {
+        return repository.searchReview(postId);
+    }
 }
