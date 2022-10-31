@@ -53,4 +53,9 @@ public class ReviewController {
     List<Review> searchReview(@PathVariable("postId") String postId) {
         return repository.searchReview(postId);
     }
+
+    @DeleteMapping("/reviews/{id}")
+    void deleteReview(@PathVariable("id") int id) {
+        repository.deleteById(id);
+    }
 }

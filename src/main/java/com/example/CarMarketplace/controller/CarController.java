@@ -99,4 +99,9 @@ public class CarController {
     List<Car> searchCarModel(@PathVariable("modelName") String modelName) {
         return repository.searchModel(modelName);
     }
+
+    @DeleteMapping("/cars/{id}")
+    void deleteCar(@PathVariable("id") int id) {
+        repository.deleteById(id);
+    }
 }

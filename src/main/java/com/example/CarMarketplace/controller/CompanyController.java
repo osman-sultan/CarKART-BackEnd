@@ -36,4 +36,9 @@ public class CompanyController {
         return repository.save(newCompany);
     }
 
+    @DeleteMapping("/company/{id}")
+    void deleteCompany(@PathVariable("make") String make) {
+        repository.deleteById(make);
+    }
+
 }

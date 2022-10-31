@@ -36,4 +36,9 @@ public class UserController {
         return repository.save(newUser);
     }
 
+    @DeleteMapping("/user/{id}")
+    void deleteUser(@PathVariable("id") int id) {
+        repository.deleteById(id);
+    }
+
 }
