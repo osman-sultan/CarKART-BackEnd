@@ -38,7 +38,7 @@ public class CarController {
         );
     }
 
-    @PostMapping("/courses")
+    @PostMapping("/cars")
     Car createCar(@RequestBody CarDto carDto) {
         Car newCar = new Car();
         newCar.setId(carDto.getId());
@@ -55,5 +55,43 @@ public class CarController {
                 () -> new CompanyNotFoundException(carDto.getMake()));
         newCar.setCompany(company);
         return repository.save(newCar);
+    }
+
+    @PutMapping("/cars/{id}")
+    Car updateCars(@RequestBody CarDto carDto, @PathVariable("id") int id_of_car) {
+        return repository.findById(id_of_car)
+                .map(car -> {
+                    Company company = companyRepository.findById(carDto.getMake()).orElseThrow(
+                            () -> new CompanyNotFoundException(carDto.getMake()));
+                    car.setCompany(company);
+                    car.setModel(carDto.getModel());
+                    car.setReleaseYear(carDto.getReleaseYear());
+                    car.setFuelType(carDto.getFuelType());
+                    car.setPrice(carDto.getPrice());
+                    car.setVehicleType(carDto.getVehicleType());
+                    car.setHp(carDto.getHp());
+                    car.setMileage(carDto.getMileage());
+                    car.setColour(carDto.getColour());
+                    car.setTransmission(carDto.getTransmission());
+                    return repository.save(car);
+                })
+                .orElseGet(() -> {
+                    Car newCar = new Car();
+                    newCar.setId(id_of_car);
+                    Company company = companyRepository.findById(carDto.getMake()).orElseThrow(
+                            () -> new CompanyNotFoundException(carDto.getMake()));
+                    newCar.setCompany(company);
+                    newCar.setCompany(company);
+                    newCar.setModel(carDto.getModel());
+                    newCar.setReleaseYear(carDto.getReleaseYear());
+                    newCar.setFuelType(carDto.getFuelType());
+                    newCar.setPrice(carDto.getPrice());
+                    newCar.setVehicleType(carDto.getVehicleType());
+                    newCar.setHp(carDto.getHp());
+                    newCar.setMileage(carDto.getMileage());
+                    newCar.setColour(carDto.getColour());
+                    newCar.setTransmission(carDto.getTransmission());
+                    return repository.save(newCar);
+                });
     }
 }

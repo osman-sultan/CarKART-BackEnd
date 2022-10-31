@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class CompanyDTO {
+public class CompanyDto {
     private String make;
     private String country;
     private int yearFounded;
