@@ -81,16 +81,6 @@ public class CarController {
                     Company company = companyRepository.findById(carDto.getMake()).orElseThrow(
                             () -> new CompanyNotFoundException(carDto.getMake()));
                     newCar.setCompany(company);
-                    newCar.setCompany(company);
-                    newCar.setModel(carDto.getModel());
-                    newCar.setReleaseYear(carDto.getReleaseYear());
-                    newCar.setFuelType(carDto.getFuelType());
-                    newCar.setPrice(carDto.getPrice());
-                    newCar.setVehicleType(carDto.getVehicleType());
-                    newCar.setHp(carDto.getHp());
-                    newCar.setMileage(carDto.getMileage());
-                    newCar.setColour(carDto.getColour());
-                    newCar.setTransmission(carDto.getTransmission());
                     return repository.save(newCar);
                 });
     }

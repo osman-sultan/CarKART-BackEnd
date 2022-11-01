@@ -13,4 +13,6 @@ public class UserDto {
     private String email;
     private String password;
     private String address;
+    private String creditCardNumber;
+    private String userType;
 }
