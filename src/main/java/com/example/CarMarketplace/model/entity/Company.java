@@ -21,7 +21,6 @@ public class Company {
     @NotEmpty
     private String country;
 
-    @NotEmpty
     private int yearFounded;
 
     @NotEmpty

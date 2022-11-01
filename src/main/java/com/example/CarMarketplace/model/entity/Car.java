@@ -23,22 +23,18 @@ public class Car {
     @NotEmpty
     private String model;
 
-    @NotEmpty
     private int releaseYear;
 
     @NotEmpty
     private String fuelType;
 
-    @NotEmpty
     private double price;
 
     @NotEmpty
     private String vehicleType;
 
-    @NotEmpty
     private double hp;
 
-    @NotEmpty
     private double mileage;
 
     @NotEmpty
