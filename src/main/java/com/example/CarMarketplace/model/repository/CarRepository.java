@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 @Repository
-public interface CarRepository extends JpaRepository <Car, Integer>{
+public interface CarRepository extends JpaRepository <Car, Long>{
 
     @Query(value = "select * from Car_E c " +
             "where lower(c.model) like lower(concat('%', :modelName, '%'))", nativeQuery = true)

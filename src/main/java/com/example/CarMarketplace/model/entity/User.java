@@ -15,8 +15,7 @@ import javax.validation.constraints.NotEmpty;
 public class User {
 
     @Id
-    @NotEmpty
-    private int id;
+    private long id;
 
     @NotEmpty
     private String username;
@@ -36,13 +35,7 @@ public class User {
     @NotEmpty
     private String address;
 
-    @NotEmpty
-    private String creditCardNumber;
-
-    @NotEmpty
-    private String userType;
-
-    public User(int id, String username, String email, String password) {
+    public User(long id, String username, String email, String password) {
         this.id = id;
         this.username = username;
         this.email = email;

@@ -32,7 +32,7 @@ public class ReviewController {
     }
 
     @GetMapping("/reviews/{id}")
-    Review retrieveReview(@PathVariable("id") int id){
+    Review retrieveReview(@PathVariable("id") Long id){
         return repository.findById(id).orElseThrow(
                 () -> new ReviewNotFoundException(id)
         );
@@ -55,7 +55,7 @@ public class ReviewController {
     }
 
     @DeleteMapping("/reviews/{id}")
-    void deleteReview(@PathVariable("id") int id) {
+    void deleteReview(@PathVariable("id") Long id) {
         repository.deleteById(id);
     }
 }

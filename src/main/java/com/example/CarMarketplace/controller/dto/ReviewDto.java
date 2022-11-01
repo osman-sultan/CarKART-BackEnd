@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 @Getter
 @Setter
 public class ReviewDto {
-    private int id;
-    private int userId;
+    private long id;
+    private long userId;
     private String dateTimeStamp;
 }

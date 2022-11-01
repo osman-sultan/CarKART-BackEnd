@@ -14,8 +14,7 @@ import javax.validation.constraints.NotEmpty;
 @Table(name = "Car_E")
 public class Car {
     @Id
-    @NotEmpty
-    private int id;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "make")
@@ -48,7 +47,7 @@ public class Car {
     @NotEmpty
     private String transmission;
 
-    public Car(int id, Company company, String model, int releaseYear){
+    public Car(long id, Company company, String model, int releaseYear){
         this.id = id;
         this.company = company;
         this.model = model;

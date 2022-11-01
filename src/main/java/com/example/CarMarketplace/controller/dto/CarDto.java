@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 @Getter
 @Setter
 public class CarDto {
-    private int id;
+    private long id;
     private String make;
     private String model;
     private int releaseYear;

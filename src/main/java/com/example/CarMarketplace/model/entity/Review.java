@@ -15,8 +15,7 @@ import javax.validation.constraints.NotEmpty;
 public class Review {
 
     @Id
-    @NotEmpty
-    private int id;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "userId")
@@ -28,7 +27,7 @@ public class Review {
     private int likes;
     private int replies;
 
-    public Review(int id, User user, String dateTimeStamp){
+    public Review(long id, User user, String dateTimeStamp){
         this.id = id;
         this.user = user;
         this.dateTimeStamp = dateTimeStamp;

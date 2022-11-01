@@ -32,7 +32,7 @@ public class CarController {
     }
 
     @GetMapping("/cars/{id}")
-    Car retrieveCar(@PathVariable("id") int id){
+    Car retrieveCar(@PathVariable("id") Long id){
         return repository.findById(id).orElseThrow(
                 () -> new CarNotFoundException(id)
         );
@@ -58,7 +58,7 @@ public class CarController {
     }
 
     @PutMapping("/cars/{id}")
-    Car updateCars(@RequestBody CarDto carDto, @PathVariable("id") int id_of_car) {
+    Car updateCars(@RequestBody CarDto carDto, @PathVariable("id") Long id_of_car) {
         return repository.findById(id_of_car)
                 .map(car -> {
                     Company company = companyRepository.findById(carDto.getMake()).orElseThrow(
@@ -91,7 +91,7 @@ public class CarController {
     }
 
     @DeleteMapping("/cars/{id}")
-    void deleteCar(@PathVariable("id") int id) {
+    void deleteCar(@PathVariable("id") Long id) {
         repository.deleteById(id);
     }
 }

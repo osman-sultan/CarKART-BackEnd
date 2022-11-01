@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ReviewRepository extends JpaRepository <Review, Integer>{
+public interface ReviewRepository extends JpaRepository <Review, Long>{
 
     @Query(value = "select * from Review_E r " +
             "where lower(r.id) like lower(concat('%', :postId, '%'))", nativeQuery = true)

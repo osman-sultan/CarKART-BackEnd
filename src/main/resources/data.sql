@@ -1,9 +1,9 @@
-INSERT INTO User_E (id, username, firstName, lastName, email, password, address, creditCardNumber, userType) VALUES
-(1, 'user1', 'Bart', 'Holomew', 'b.holomew@email.com', 'bholomew', '123 Hello St.', '1234567891234567', 'Buyer');
-INSERT INTO User_E (id, username, firstName, lastName, email, password, address, creditCardNumber, userType) VALUES
-(2, 'user2', 'Ozzington', 'Smith', 'o.smith@email.com', 'osmith', '231 Bye St.', '9876543241324567', 'Seller');
-INSERT INTO User_E (id, username, firstName, lastName, email, password, address, creditCardNumber, userType) VALUES
-(3, 'user3', 'John', 'Doe', 'j.doe@email.com', 'jdoe', '321 Thanks Ave.', '8765463728172637', 'Buyer');
+INSERT INTO User_E (id, username, firstName, lastName, email, password, address) VALUES
+(1, 'user1', 'Bart', 'Holomew', 'b.holomew@email.com', 'bholomew', '123 Hello St.');
+INSERT INTO User_E (id, username, firstName, lastName, email, password, address) VALUES
+(2, 'user2', 'Ozzington', 'Smith', 'o.smith@email.com', 'osmith', '231 Bye St.');
+INSERT INTO User_E (id, username, firstName, lastName, email, password, address) VALUES
+(3, 'user3', 'John', 'Doe', 'j.doe@email.com', 'jdoe', '321 Thanks Ave.');
 
 INSERT INTO Company_E (make, country, yearFounded, hq, logoURL) VALUES ('BMW', 'Germany', 1916, 'Munich', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/1200px-BMW_logo_%28gray%29.svg.png');
 -- data from https://en.wikipedia.org/wiki/BMW
