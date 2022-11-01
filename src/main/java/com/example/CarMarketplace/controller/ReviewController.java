@@ -1,8 +1,12 @@
 package com.example.CarMarketplace.controller;
 
+import com.example.CarMarketplace.controller.dto.CarDto;
 import com.example.CarMarketplace.controller.dto.ReviewDto;
+import com.example.CarMarketplace.controller.exceptions.CompanyNotFoundException;
 import com.example.CarMarketplace.controller.exceptions.UserNotFoundException;
 import com.example.CarMarketplace.controller.exceptions.ReviewNotFoundException;
+import com.example.CarMarketplace.model.entity.Car;
+import com.example.CarMarketplace.model.entity.Company;
 import com.example.CarMarketplace.model.entity.User;
 import com.example.CarMarketplace.model.entity.Review;
 import com.example.CarMarketplace.model.repository.ReviewRepository;
@@ -47,6 +51,26 @@ public class ReviewController {
                 () -> new UserNotFoundException(reviewDto.getUserId()));
         newReview.setUser(user);
         return repository.save(newReview);
+    }
+
+    @PutMapping("/reviews/{id}")
+    Review updateReviews(@RequestBody ReviewDto reviewDto, @PathVariable("id") Long id) {
+        return repository.findById(id)
+                .map(review -> {
+                    User user = userRepository.findById(reviewDto.getUserId()).orElseThrow(
+                            () -> new UserNotFoundException(reviewDto.getUserId()));
+                    review.setUser(user);
+                    review.setDateTimeStamp(reviewDto.getDateTimeStamp());
+                    return repository.save(review);
+                })
+                .orElseGet(() -> {
+                    Review newReview = new Review();
+                    newReview.setId(id);
+                    User user = userRepository.findById(reviewDto.getUserId()).orElseThrow(
+                            () -> new UserNotFoundException(reviewDto.getUserId()));
+                    newReview.setUser(user);
+                    return repository.save(newReview);
+                });
     }
 
     @GetMapping("/reviews/search/{id}")
