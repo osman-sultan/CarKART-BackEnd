@@ -25,22 +25,18 @@ public class Car {
 
     private int releaseYear;
 
-    @NotEmpty
     private String fuelType;
 
     private double price;
 
-    @NotEmpty
     private String vehicleType;
 
     private double hp;
 
     private double mileage;
 
-    @NotEmpty
     private String colour;
 
-    @NotEmpty
     private String transmission;
 
     public Car(long id, Company company, String model, int releaseYear){
