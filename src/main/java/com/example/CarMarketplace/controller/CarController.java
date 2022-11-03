@@ -51,6 +51,7 @@ public class CarController {
         newCar.setMileage(carDto.getMileage());
         newCar.setColour(carDto.getColour());
         newCar.setTransmission(carDto.getTransmission());
+        newCar.setCarURL(carDto.getCarURL());
         Company company = companyRepository.findById(carDto.getMake()).orElseThrow(
                 () -> new CompanyNotFoundException(carDto.getMake()));
         newCar.setCompany(company);
@@ -73,6 +74,7 @@ public class CarController {
                     car.setMileage(carDto.getMileage());
                     car.setColour(carDto.getColour());
                     car.setTransmission(carDto.getTransmission());
+                    car.setCarURL((carDto.getCarURL()));
                     return repository.save(car);
                 })
                 .orElseGet(() -> {

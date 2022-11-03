@@ -12,12 +12,12 @@ INSERT INTO Company_E (make, country, yearFounded, hq, logoURL) VALUES ('Volkswa
 INSERT INTO Company_E (make, country, yearFounded, hq, logoURL) VALUES ('SEAT', 'Spain', 1950, 'Martorell', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SEAT_Logo_from_2017.svg/2560px-SEAT_Logo_from_2017.svg.png');
 -- data from https://en.wikipedia.org/wiki/SEAT
 
-INSERT INTO Car_E (id, make, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission) VALUES
-(1, 'BMW', '316', 2011, 'Diesel', 6800, 'Sedan', 116, 235000, 'Pearl', 'Manual');
-INSERT INTO Car_E (id, make, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission) VALUES
-(2, 'Volkswagen', 'Golf', 2011, 'Gasoline', 6877, 'Hatchback', 122, 92800, 'Yellow', 'Manual');
-INSERT INTO Car_E (id, make, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission) VALUES
-(3, 'SEAT', 'Exeo', 2011, 'Gasoline', 6900, 'Hatchback', 160, 149300, 'Silver', 'Manual');
+INSERT INTO Car_E (id, make, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES
+(1, 'BMW', '316', 2011, 'Diesel', 6800, 'Sedan', 116, 235000, 'Pearl', 'Manual', 'https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/vhs/BMW%20316i.png');
+INSERT INTO Car_E (id, make, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES
+(2, 'Volkswagen', 'Golf', 2011, 'Gasoline', 6877, 'Hatchback', 122, 92800, 'Yellow', 'Manual', 'https://www.motortrend.com/uploads/sites/10/2015/11/2011-volkswagen-golf-6-at-pzev-3-door-hatchback-angular-front.png');
+INSERT INTO Car_E (id, make, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES
+(3, 'SEAT', 'Exeo', 2011, 'Gasoline', 6900, 'Hatchback', 160, 149300, 'Silver', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/6/67/2011_SEAT_Exeo_Sport_Tech_CR_TDi_168_2.0_Front.jpg');
 -- data from https://www.kaggle.com/datasets/ander289386/cars-germany
 
 INSERT INTO Review_E (id, userId, dateTimeStamp, likes, replies) VALUES (1, 1, '09/27/2022', 0, 1);

@@ -19,4 +19,5 @@ public class CarDto {
     private double mileage;
     private String colour;
     private String transmission;
+    private String carURL;
 }

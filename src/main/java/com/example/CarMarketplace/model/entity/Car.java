@@ -39,6 +39,9 @@ public class Car {
 
     private String transmission;
 
+    @NotEmpty
+    private String carURL;
+
     public Car(long id, Company company, String model, int releaseYear){
         this.id = id;
         this.company = company;
