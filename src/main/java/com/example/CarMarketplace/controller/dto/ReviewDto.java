@@ -10,5 +10,7 @@ import javax.validation.constraints.NotEmpty;
 public class ReviewDto {
     private long id;
     private long userId;
+    private long carId;
     private String dateTimeStamp;
+    private String reviewText;
 }

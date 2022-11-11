@@ -20,6 +20,6 @@ INSERT INTO Car_E (id, make, model, releaseYear, fuelType, price, vehicleType, h
 (3, 'SEAT', 'Exeo', 2011, 'Gasoline', 6900, 'Hatchback', 160, 149300, 'Silver', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/6/67/2011_SEAT_Exeo_Sport_Tech_CR_TDi_168_2.0_Front.jpg');
 -- data from https://www.kaggle.com/datasets/ander289386/cars-germany
 
-INSERT INTO Review_E (id, userId, dateTimeStamp, likes, replies) VALUES (1, 1, '09/27/2022', 0, 1);
-INSERT INTO Review_E (id, userId, dateTimeStamp, likes, replies) VALUES (2, 2, '09/28/2022', 100, 12);
+INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (1, 1, 1, '09/27/2022', 'Amazing car!', 0, 1);
+INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (2, 2, 3, '09/28/2022', 'This car should not exist.', 100, 12);
 
