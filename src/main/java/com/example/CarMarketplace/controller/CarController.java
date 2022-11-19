@@ -88,8 +88,8 @@ public class CarController {
     }
 
     @GetMapping("/cars/search/model/{keyWord}")
-    List<Car> searchCarModel(@PathVariable("modelName") String modelName) {
-        return repository.searchModel(modelName);
+    List<Car> searchCarModel(@PathVariable("keyWord") String keyWord) {
+        return repository.searchModel(keyWord);
     }
 
     @DeleteMapping("/cars/{id}")

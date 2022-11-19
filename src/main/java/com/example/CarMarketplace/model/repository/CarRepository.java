@@ -12,7 +12,7 @@ import java.util.*;
 public interface CarRepository extends JpaRepository <Car, Long>{
 
     @Query(value = "select * from Car_E c " +
-            "where lower(c.model) like lower(concat('%', :modelName, '%'))", nativeQuery = true)
-    List<Car> searchModel(@Param("modelName") String modelName);
+            "where lower(c.model) like lower(concat('%', :keyWord, '%'))", nativeQuery = true)
+    List<Car> searchModel(@Param("keyWord") String keyWord);
 }
 
