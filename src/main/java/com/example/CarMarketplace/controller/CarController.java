@@ -5,8 +5,10 @@ import com.example.CarMarketplace.controller.exceptions.CarNotFoundException;
 import com.example.CarMarketplace.controller.exceptions.CompanyNotFoundException;
 import com.example.CarMarketplace.model.entity.Car;
 import com.example.CarMarketplace.model.entity.Company;
+import com.example.CarMarketplace.model.entity.Review;
 import com.example.CarMarketplace.model.repository.CarRepository;
 import com.example.CarMarketplace.model.repository.CompanyRepository;
+import com.example.CarMarketplace.model.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,6 +23,9 @@ public class CarController {
 
     @Autowired
     private CompanyRepository companyRepository;
+
+    @Autowired
+    private ReviewRepository reviewRepository;
 
     public CarController(CarRepository repository){
         this.repository = repository;
@@ -94,6 +99,11 @@ public class CarController {
 
     @DeleteMapping("/cars/{id}")
     void deleteCar(@PathVariable("id") Long id) {
+        List<Review> associatedReviews = reviewRepository.searchReviewOnCar(id);
+
+        for(Review review: associatedReviews) {
+            reviewRepository.delete(review);
+        }
         repository.deleteById(id);
     }
 }
