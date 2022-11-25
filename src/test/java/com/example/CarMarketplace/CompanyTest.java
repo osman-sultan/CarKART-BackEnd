@@ -49,7 +49,6 @@ class CompanyTest {
 		assertEquals("BMW", receivedJson.get("make").textValue());
 		assertEquals("Germany", receivedJson.get("country").textValue());
 		assertEquals(1916, receivedJson.get("yearFounded").intValue());
-		assertEquals("BMW", receivedJson.get("make").textValue());
 		assertEquals("Munich", receivedJson.get("hq").textValue());
 	}
 
