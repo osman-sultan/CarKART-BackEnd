@@ -56,7 +56,15 @@ public class CompanyController {
     }
 
     @PostMapping("/company")
-    Company createCompany(@RequestBody Company newCompany) {
+    Company createCompany(@RequestBody CompanyDto companyDto) {
+        Company newCompany = new Company();
+
+        newCompany.setMake(companyDto.getMake());
+        newCompany.setCountry(companyDto.getCountry());
+        newCompany.setYearFounded(companyDto.getYearFounded());
+        newCompany.setHq(companyDto.getHq());
+        newCompany.setLogoURL(companyDto.getLogoURL());
+
         return repository.save(newCompany);
     }
 
