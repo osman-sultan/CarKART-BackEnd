@@ -1,10 +1,13 @@
 package com.example.CarMarketplace;
 
 import com.example.CarMarketplace.controller.exceptions.CompanyNotFoundException;
+import com.example.CarMarketplace.controller.exceptions.UserNotFoundException;
 import com.example.CarMarketplace.model.entity.Car;
 import com.example.CarMarketplace.model.entity.Company;
+import com.example.CarMarketplace.model.entity.User;
 import com.example.CarMarketplace.model.repository.CarRepository;
 import com.example.CarMarketplace.model.repository.CompanyRepository;
+import com.example.CarMarketplace.model.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -41,6 +44,9 @@ class CarTest {
 	@Autowired
 	private CompanyRepository companyRepository;
 
+	@Autowired
+	private UserRepository userRepository;
+
 	@Test
 	void getCar() throws Exception {
 
@@ -55,6 +61,7 @@ class CarTest {
 		// Make sure all attributes are correct using .get()
 		assertEquals(1L, receivedJson.get("id").longValue());
 		assertEquals("BMW", receivedJson.get("company").get("make").textValue());
+		assertEquals(1L, receivedJson.get("seller").get("id").longValue() );
 		assertEquals("316", receivedJson.get("model").textValue());
 		assertEquals(2011, receivedJson.get("releaseYear").intValue());
 		assertEquals("Diesel", receivedJson.get("fuelType").textValue());
@@ -74,6 +81,7 @@ class CarTest {
 		ObjectNode carJson = objectMapper.createObjectNode();
 		carJson.put("id", 100L);
 		carJson.put("make", "BMW");
+		carJson.put("sellerId", 2L);
 		carJson.put("model", "E36");
 		carJson.put("releaseYear", 1996);
 		carJson.put("fuelType", "Gasoline");
@@ -100,6 +108,7 @@ class CarTest {
 
 		assertEquals(100L, addedCar.getId());
 		assertEquals("BMW", addedCar.getCompany().getMake());
+		assertEquals(2L, addedCar.getSeller().getId());
 		assertEquals("E36", addedCar.getModel());
 		assertEquals(1996, addedCar.getReleaseYear());
 		assertEquals("Gasoline", addedCar.getFuelType());
@@ -119,6 +128,7 @@ class CarTest {
 		ObjectNode carJson = objectMapper.createObjectNode();
 		carJson.put("id", 3L);
 		carJson.put("make", "SEAT");
+		carJson.put("sellerId", 2L);
 		carJson.put("model", "E36");
 		carJson.put("releaseYear", 2002);
 		carJson.put("fuelType", "Gasoline");
@@ -145,6 +155,7 @@ class CarTest {
 
 		assertEquals(3L, updatedCar.getId());
 		assertEquals("SEAT", updatedCar.getCompany().getMake());
+		assertEquals(2L, updatedCar.getSeller().getId());
 		assertEquals("E36", updatedCar.getModel());
 		assertEquals(2002, updatedCar.getReleaseYear());
 		assertEquals("Gasoline", updatedCar.getFuelType());
@@ -165,6 +176,9 @@ class CarTest {
 		Company company = companyRepository.findById("BMW").orElseThrow(
 				() -> new CompanyNotFoundException("BMW"));
 		c.setCompany(company);
+		User seller = userRepository.findById(1L).orElseThrow(
+				() -> new UserNotFoundException(1L));
+		c.setSeller(seller);
 		c.setModel("M3");
 		c.setReleaseYear(2009);
 		c.setFuelType("Gasoline");

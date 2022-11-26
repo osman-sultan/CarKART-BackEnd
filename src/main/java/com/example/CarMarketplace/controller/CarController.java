@@ -3,12 +3,15 @@ package com.example.CarMarketplace.controller;
 import com.example.CarMarketplace.controller.dto.CarDto;
 import com.example.CarMarketplace.controller.exceptions.CarNotFoundException;
 import com.example.CarMarketplace.controller.exceptions.CompanyNotFoundException;
+import com.example.CarMarketplace.controller.exceptions.UserNotFoundException;
 import com.example.CarMarketplace.model.entity.Car;
 import com.example.CarMarketplace.model.entity.Company;
 import com.example.CarMarketplace.model.entity.Review;
+import com.example.CarMarketplace.model.entity.User;
 import com.example.CarMarketplace.model.repository.CarRepository;
 import com.example.CarMarketplace.model.repository.CompanyRepository;
 import com.example.CarMarketplace.model.repository.ReviewRepository;
+import com.example.CarMarketplace.model.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +29,9 @@ public class CarController {
 
     @Autowired
     private ReviewRepository reviewRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     public CarController(CarRepository repository){
         this.repository = repository;
@@ -60,7 +66,12 @@ public class CarController {
         Company company = companyRepository.findById(carDto.getMake()).orElseThrow(
                 () -> new CompanyNotFoundException(carDto.getMake()));
         newCar.setCompany(company);
+        User seller = userRepository.findById(carDto.getSellerId()).orElseThrow(
+                () -> new UserNotFoundException(carDto.getSellerId()));
+        newCar.setSeller(seller);
         return repository.save(newCar);
+
+
     }
 
     @PutMapping("/cars/{id}")
@@ -70,6 +81,9 @@ public class CarController {
                     Company company = companyRepository.findById(carDto.getMake()).orElseThrow(
                             () -> new CompanyNotFoundException(carDto.getMake()));
                     car.setCompany(company);
+                    User seller = userRepository.findById(carDto.getSellerId()).orElseThrow(
+                            () -> new UserNotFoundException(carDto.getSellerId()));
+                    car.setSeller(seller);
                     car.setModel(carDto.getModel());
                     car.setReleaseYear(carDto.getReleaseYear());
                     car.setFuelType(carDto.getFuelType());
@@ -88,6 +102,9 @@ public class CarController {
                     Company company = companyRepository.findById(carDto.getMake()).orElseThrow(
                             () -> new CompanyNotFoundException(carDto.getMake()));
                     newCar.setCompany(company);
+                    User seller = userRepository.findById(carDto.getSellerId()).orElseThrow(
+                            () -> new UserNotFoundException(carDto.getSellerId()));
+                    newCar.setSeller(seller);
                     return repository.save(newCar);
                 });
     }

@@ -10,6 +10,7 @@ import javax.validation.constraints.NotEmpty;
 public class CarDto {
     private long id;
     private String make;
+    private long sellerId;
     private String model;
     private int releaseYear;
     private String fuelType;

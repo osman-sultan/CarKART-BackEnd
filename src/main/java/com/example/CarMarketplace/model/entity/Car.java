@@ -20,6 +20,10 @@ public class Car {
     @JoinColumn(name = "make")
     private Company company;
 
+    @ManyToOne
+    @JoinColumn(name = "sellerId")
+    private User seller;
+
     @NotEmpty
     private String model;
 
