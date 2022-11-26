@@ -1,10 +1,16 @@
 package com.example.CarMarketplace;
 
+import com.example.CarMarketplace.controller.exceptions.CarNotFoundException;
+import com.example.CarMarketplace.controller.exceptions.CompanyNotFoundException;
+import com.example.CarMarketplace.controller.exceptions.UserNotFoundException;
 import com.example.CarMarketplace.model.entity.Car;
 import com.example.CarMarketplace.model.entity.Company;
 import com.example.CarMarketplace.model.entity.Review;
+import com.example.CarMarketplace.model.entity.User;
+import com.example.CarMarketplace.model.repository.CarRepository;
 import com.example.CarMarketplace.model.repository.CompanyRepository;
 import com.example.CarMarketplace.model.repository.ReviewRepository;
+import com.example.CarMarketplace.model.repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.junit.jupiter.api.Test;
@@ -33,6 +39,12 @@ class ReviewTest {
 
 	@Autowired
 	private ReviewRepository reviewRepository;
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@Autowired
+	private CarRepository carRepository;
 
 	@Test
 	void getReview() throws Exception {
@@ -78,10 +90,64 @@ class ReviewTest {
 		Review addedReview = reviewRepository.findById(12345L).get();
 
 		assertEquals(12345L, addedReview.getId());
-		assertEquals(2L, addedReview.getCar().getId());
+		assertEquals(2L, addedReview.getUser().getId());
 		assertEquals(2L, addedReview.getCar().getId());
 		assertEquals("11/22/2022", addedReview.getDateTimeStamp());
 		assertEquals("Nice", addedReview.getReviewText());
 	}
 
+	@Test
+	void updateReview() throws Exception{
+
+		// Create new JSON object containing details you would like to update
+		ObjectNode reviewJson = objectMapper.createObjectNode();
+		reviewJson.put("id",2L);
+		reviewJson.put("userId", 3L);
+		reviewJson.put("carId", 2L);
+		reviewJson.put("dateTimeStamp", "11/26/2010");
+		reviewJson.put("reviewText", "L Car");
+
+		// Send a PUT request to update and retrieve the response
+		MockHttpServletResponse response = mockMvc.perform(
+						put("/reviews/2").
+								contentType("application/json").
+								content(reviewJson.toString()))
+				.andReturn().getResponse();
+
+		// assert HTTP code of response is 200 OK
+		assertEquals(200, response.getStatus());
+
+		assertTrue(reviewRepository.findById(2L).isPresent());
+		Review updatedReview = reviewRepository.findById(2L).get();
+
+		assertEquals(2L, updatedReview.getId());
+		assertEquals(3L, updatedReview.getUser().getId());
+		assertEquals(2L, updatedReview.getCar().getId());
+		assertEquals("11/26/2010", updatedReview.getDateTimeStamp());
+		assertEquals("L Car", updatedReview.getReviewText());
+	}
+
+	@Test
+	void deleteReview() throws Exception{
+
+		Review r = new Review();
+		r.setId(1000L);
+		User user = userRepository.findById(1L).orElseThrow(
+				() -> new UserNotFoundException(1L));
+		r.setUser(user);
+		Car car = carRepository.findById(3L).orElseThrow(
+				() -> new CarNotFoundException(1L));
+		r.setCar(car);
+		r.setDateTimeStamp("12/25/2024");
+		r.setReviewText("Joe Biden's car");
+		reviewRepository.save(r);
+
+		MockHttpServletResponse response = mockMvc.perform(
+						delete("/reviews/1000").
+								contentType("application/json"))
+				.andReturn().getResponse();
+
+		assertEquals(200, response.getStatus());
+		assertTrue(reviewRepository.findById(1000L).isEmpty());
+	}
 }
