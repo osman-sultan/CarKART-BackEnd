@@ -100,9 +100,54 @@ INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehi
 29, 'Peugeot', 9, '308', 2012, 'Diesel', 7950, 'Sports Car', 163, 151250, 'Mocha', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/9/9e/2022_-_Peugeot_308_III_%28C%29_-_121.jpg');
 INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
 30, 'BMW', 10, '118', 2012, 'Diesel', 7980, 'Exotic ', 143, 133500, 'Yellow ', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/3/32/BMW_E87_front_20080719.jpg');
-
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+31, 'Opel', 1, 'Kadett', 2012, 'Gasoline', 7980, 'Truck', 179, 105000, 'Mocha', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Opel_Kadett_C_Coupe_1978.jpg/640px-Opel_Kadett_C_Coupe_1978.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+32, 'Ford', 2, 'Focus', 2012, 'Gasoline', 7990, 'Exotic ', 125, 114164, 'Almond', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/7/75/2018_Ford_Focus_ST-Line_X_1.0.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+33, 'MINI', 3, 'One D Countryman' 2012, 'Diesel', 7990, 'Compact Car', 90, 128000, 'White', 'Manual', 'https://media.evo.co.uk/image/private/s--Pf_DVTza--/v1556261966/evo/images/dir_826/car_photo_413443.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+34, 'BMW', 4, 'E36', 2012, 'Diesel', 7999, 'Exotic ', 143, 150000, 'Silver', 'Manual', 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/s-l1600-1592412559.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+35, 'MINI', 5, 'Cooper Clubman', 2012, 'Gasoline', 7999, 'Sedan', 122, 160000, 'White', 'Manual', 'https://editorials.autotrader.ca/media/171893/2019-mini-cooper-clubman-all4-03-dh.jpg?center=0.6912751677852349,0.5&mode=crop&width=1920&height=1080&rnd=132114462263670000');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+36, 'Mercedes-Benz', 6, 'B-180', 2012, 'Diesel', 8000, 'Compact Car', 109, 165000, 'White', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Mercedes-Benz_W247_IMG_0398.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+37, 'Renault', 7, 'Sandero', 2012, 'Gasoline', 8000, 'Compact Car', 131, 51200, 'Pearl', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/2/23/Dacia_Sandero_III_IMG_5761.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+38, 'Opel', 8, 'Insignia', 2012, 'Diesel', 8000, 'Hatchback', 160, 107000, 'Blue', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Opel_Insignia_Sports_Tourer_1.5_DIT_Innovation_%28B%29_%E2%80%93_Frontansicht%2C_12._Mai_2017%2C_D%C3%BCsseldorf.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+39, 'MINI', 9, 'One', 2012, 'Gasoline', 8000, 'Hatchback', 98, 130000, 'Black', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/2014_MINI_Cooper_Hardtop_--_NHTSA_test_8883_-_front.jpg/1200px-2014_MINI_Cooper_Hardtop_--_NHTSA_test_8883_-_front.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+40, 'BMW', 10, '320', 2012, 'Diesel', 8199, 'Sports Car', 184, 214000, 'Blue', 'Automatic', 'https://upload.wikimedia.org/wikipedia/commons/8/8d/BMW_G20_IMG_0167.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+41, 'Opel', 1, 'GT', 2013, 'Gasoline', 8990, 'SUV', 140, 73760, 'Pearl', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Opel_GT%2C_Bj._1973_am_16.07.2006.jpg/1200px-Opel_GT%2C_Bj._1973_am_16.07.2006.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+42, 'Volkswagen', 2, 'Polo-GT', 2013, 'Gasoline', 8990, 'SUV', 160, 113000, 'Almond', 'Manual', 'https://www.carblogindia.com/wp-content/uploads/2020/03/Volkswagen-Polo-GT.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+43, 'Hyundai', 3, 'iX35', 2013, 'Diesel', 8990, 'SUV', 116, 108803, 'Mocha', 'Manual', 'https://assets-eu-01.kc-usercontent.com/3b3d460e-c5ae-0195-6b86-3ac7fb9d52db/af17dbcf-c3bb-4958-830f-2f1fffd21ffb/Hyundai%20ix35.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+44, 'Opel', 4, 'Adam', 2013, 'Gasoline', 8990, 'Sedan', 101, 7400, 'Yellow ', 'Manual', 'https://www.topgear.com/sites/default/files/cars-car/image/2015/01/buyers_guide_-_vauxhall_adam_2014_-_front_quarter.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+45, 'BMW', 5, '520', 2013, 'Diesel', 8990, 'Truck', 184, 239211, 'Black', 'Automatic', 'https://upload.wikimedia.org/wikipedia/commons/5/52/BMW_G30_FL_IMG_5351.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+46, 'Ford', 6, 'B-Max', 2013, 'Gasoline', 8995, 'Compact Car', 120, 86980, 'Yellow ', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ford_B-Max_Titanium_%E2%80%93_Frontansicht%2C_22._Februar_2014%2C_Ratingen.jpg/1200px-Ford_B-Max_Titanium_%E2%80%93_Frontansicht%2C_22._Februar_2014%2C_Ratingen.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+47, 'Volkswagen', 7, '', 2013, 'Diesel', 8999, 'Compact Car', 105, 98000, 'Silver', 'Automatic', 'https://upload.wikimedia.org/wikipedia/commons/b/b7/VW_Golf_Variant_1.4_TSI_BlueMotion_Technology_Highline_%28VII%2C_Facelift%29_%E2%80%93_Frontansicht%2C_21._April_2017%2C_D%C3%BCsseldorf.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+48, 'Ford', 8, 'Bronco', 2013, 'Diesel', 8999, 'Truck', 101, 98988, 'Black', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/0/05/2021_Ford_Bronco_Outer_Banks%2C_Front_Right%2C_10-10-2021.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+49, 'Opel', 9, 'Mokka', 2013, 'Gasoline', 8999, 'Sedan', 101, 41124, 'Red', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Opel_Mokka-e_IMG_6111.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
+50, 'Mercedes-Benz', 10, 'AMG-GTR', 2013, 'Diesel', 20000, 'SUV', 140, 170000, 'Red', 'Manual', 'https://www.motortrend.com/uploads/sites/5/2016/12/2018-Mercedes-AMG-GT-R-front-three-quarters-in-motion-e1481915866815.jpg');
 -- data from https://www.kaggle.com/datasets/ander289386/cars-germany
 
 INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (1, 1, 1, '09/27/2022', 'Amazing car!', 0, 1);
 INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (2, 2, 3, '09/28/2022', 'This car should not exist.', 100, 12);
+INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (3, 4, 34, '09/31/2022', 'Wowza! I love this car', 10, 1);
+INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (4, 7, 45, '10/28/2022', 'Underwhelming car. Bad experience with the seller. 2/5 stars.', 0, 0);
+INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (5, 4, 23, '03/20/2022', 'Have had the car for 3 months, no problems yet.', 4, 0);
+INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (6, 10, 50, '10/02/2022', 'Amazing price for this car. A true steal. I will be going very fast!!!', 100, 5);
+
+
 
