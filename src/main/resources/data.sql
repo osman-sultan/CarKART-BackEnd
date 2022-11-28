@@ -105,7 +105,7 @@ INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehi
 INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
 32, 'Ford', 2, 'Focus', 2012, 'Gasoline', 7990, 'Exotic ', 125, 114164, 'Almond', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/7/75/2018_Ford_Focus_ST-Line_X_1.0.jpg');
 INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
-33, 'MINI', 3, 'One D Countryman' 2012, 'Diesel', 7990, 'Compact Car', 90, 128000, 'White', 'Manual', 'https://media.evo.co.uk/image/private/s--Pf_DVTza--/v1556261966/evo/images/dir_826/car_photo_413443.jpg');
+33, 'MINI', 3, 'One D Countryman', 2012, 'Diesel', 7990, 'Compact Car', 90, 128000, 'White', 'Manual', 'https://media.evo.co.uk/image/private/s--Pf_DVTza--/v1556261966/evo/images/dir_826/car_photo_413443.jpg');
 INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
 34, 'BMW', 4, 'E36', 2012, 'Diesel', 7999, 'Exotic ', 143, 150000, 'Silver', 'Manual', 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/s-l1600-1592412559.jpg');
 INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES(
