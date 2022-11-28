@@ -28,24 +28,15 @@ INSERT INTO Company_E (make, country, yearFounded, hq, logoURL) VALUES ('Dacia',
 INSERT INTO Company_E (make, country, yearFounded, hq, logoURL) VALUES ('MINI', 'United Kingdom', 1969, 'Phoenix', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/MINI_logo.svg/2560px-MINI_logo.svg.png');
 INSERT INTO Company_E (make, country, yearFounded, hq, logoURL) VALUES ('Hyundai', 'South Korea', 1967, 'Seoul', 'https://www.carlogos.org/logo/Hyundai-logo-grey-2560x1440.png');
 
-
-
-
-
-
-
-
-
-
-
-
-
 INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES
 (1, 'BMW', 1, '316', 2011, 'Diesel', 6800, 'Sedan', 116, 235000, 'Pearl', 'Manual', 'https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/vhs/BMW%20316i.png');
 INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES
 (2, 'Volkswagen', 2, 'Golf', 2011, 'Gasoline', 6877, 'Hatchback', 122, 92800, 'Yellow', 'Manual', 'https://www.motortrend.com/uploads/sites/10/2015/11/2011-volkswagen-golf-6-at-pzev-3-door-hatchback-angular-front.png');
 INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES
 (3, 'SEAT', 3, 'Exeo', 2011, 'Gasoline', 6900, 'Hatchback', 160, 149300, 'Silver', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/6/67/2011_SEAT_Exeo_Sport_Tech_CR_TDi_168_2.0_Front.jpg');
+INSERT INTO Car_E (id, make, sellerId, model, releaseYear, fuelType, price, vehicleType, hp, mileage, colour, transmission, carURL) VALUES
+(4, 'Renault', 4, 'Megane', 2011, 'Gasoline', 6950, 'Compact Car', 110, 96200, 'Red', 'Manual', 'https://upload.wikimedia.org/wikipedia/commons/c/c6/2019_Renault_Megane_R.S._300_Trophy_1.8_Front.jpg');
+
 -- data from https://www.kaggle.com/datasets/ander289386/cars-germany
 
 INSERT INTO Review_E (id, userId, carId, dateTimeStamp, reviewText, likes, replies) VALUES (1, 1, 1, '09/27/2022', 'Amazing car!', 0, 1);
