@@ -18,4 +18,7 @@ public interface ReviewRepository extends JpaRepository <Review, Long>{
     @Query(value = "select * from Review_E r " +
             "where lower(r.carId) like lower(concat('%', :inputCarId, '%'))", nativeQuery = true)
     List<Review> searchReviewOnCar(@Param("inputCarId") Long inputCarId);
+
+    @Query(value="select * from Review_E r where userId = :userId", nativeQuery = true)
+    List<Review> searchReviewOnUser(@Param("userId") Long userId);
 }

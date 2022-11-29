@@ -47,6 +47,11 @@ public class ReviewController {
         );
     }
 
+    @GetMapping("/reviews/userId/{userId}")
+    List<Review> retrieveAllReviewsByUser(@PathVariable("userId") Long userId) {
+        return repository.searchReviewOnUser(userId);
+    }
+
     @PostMapping("/reviews")
     Review createReview(@RequestBody ReviewDto reviewDto) {
         Review newReview = new Review();
