@@ -10,7 +10,7 @@ Backend Stack:
 - SQL
 - H2 Database
 
-For the frontend please visit: [frontend](https://github.com/osman-sultan/CarKART-FrontEnd)](https://github.com/osman-sultan/CarKART-FrontEnd)
+For the frontend please visit: [frontend](https://github.com/osman-sultan/CarKART-FrontEnd)
 
 # Installation and Project Setup
 
