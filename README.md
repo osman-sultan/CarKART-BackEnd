@@ -2,7 +2,7 @@
 
 A straightforward marketplace to buy, sell, trade, and compare used and new automobiles.
 
-Developed by a 7 Industrial Engineering majors from the University of Toronto.
+Developed by a team of 7 Industrial Engineering majors from the University of Toronto.
 
 Backend Stack:
 - Java 17
