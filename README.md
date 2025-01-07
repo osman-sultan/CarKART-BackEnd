@@ -10,6 +10,8 @@ Backend Stack:
 - SQL
 - H2 Database
 
+The Backend is based on MVC architecture
+
 For the frontend please visit: (https://github.com/osman-sultan/CarKART-FrontEnd)
 
 # Installation and Project Setup
